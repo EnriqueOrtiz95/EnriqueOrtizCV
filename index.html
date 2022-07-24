@@ -260,10 +260,11 @@
                     <a href="EnriqueOrtiz-CV.pdf" download class="btn btn2">Descargar CV</a>
                 </div>
                 <div class="contactame__right">
-                    <form name="submit-to-google-sheet" method="POST" data-netlify="true" id="formulario">
+                    <form name="contact" method="POST" data-netlify="true" id="formulario">
                         <input type="text" name="Name" placeholder="Tu nombre.." required>
                         <input type="email" name="Email" placeholder="Tu correo.." required>
                         <textarea name="Message" rows="6" placeholder="Tu mensaje"></textarea>
+                        <div data-netlify-recaptcha="true"></div>
                         <button type="submit" class="btn btn2">Enviar</button>
                     </form>
                 </div>
