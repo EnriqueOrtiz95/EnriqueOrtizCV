@@ -108,6 +108,7 @@ header, section, main, footer{
     --color-coffee: #5E311E;
     --color-green: #008f39;
     --color-blue: #1470d8;
+    --box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
     --dot-size: 1px;
     --dot-space: 22px;
     --color-background: hsl(0, 0%, 100%);
@@ -124,6 +125,7 @@ header, section, main, footer{
 .header{
     min-height: 100vh;
     width: 100%;
+    position: relative;
 }
 
 .nav{
@@ -136,7 +138,7 @@ header, section, main, footer{
     padding: 2rem 3rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     gap: 1rem;
 }
@@ -147,6 +149,10 @@ header, section, main, footer{
 .nav__logo span{
     color: var(--color-pink);
     font-size: 3.5rem;
+}
+
+.nav__right:last-of-type a{
+    font-size: 2.5rem;
 }
 
 .nav__right a{
@@ -186,11 +192,50 @@ header, section, main, footer{
     display: none;
 }
 
+/* .sticky-sidebar{
+    position: fixed;
+    background-color: transparent;
+    right: 1%;
+    width: 10rem;
+    top: 25%;
+    height: 50vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--color-black2);
+    transition: transform .5s;
+}
+.sticky-sidebar:hover{
+    transform: scale(1.1);
+}
+.sticky-sidebar p{
+    font-size: 1.6rem;
+}
+.sticky-sidebar a{
+    margin-bottom: 3rem;
+}
+.sticky-sidebar a:hover{
+    color: var(--color-pink);
+} */
+
 
 /*? ----------------------- HEADER MQ ---------------------- */
 @media screen and (max-width: 991px){
     html{
         font-size: 55%;
+    }
+    .nav {
+        font-size: 87%;
+    }
+    .nav__right a{
+        margin-inline: .5rem;
+    }
+    .nav__right:last-of-type a{
+        font-size: 1.5rem;
     }
 }
 
@@ -337,7 +382,7 @@ header, section, main, footer{
 }
 .proyecto__card:hover{
     transform: scale(1.05);
-    box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
+    box-shadow: var(--box-shadow);
 }
 .proyecto__card div{
     padding: 2rem;
