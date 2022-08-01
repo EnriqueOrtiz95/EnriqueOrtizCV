@@ -56,6 +56,9 @@ header, section, main, footer{
 .text-pink{
     color: var(--color-pink);
 }
+.text-indigo{
+    color: var(--color-indigo);
+}
 .text-green{
     color: var(--color-green);
 }
@@ -108,6 +111,7 @@ header, section, main, footer{
     --color-coffee: #5E311E;
     --color-green: #008f39;
     --color-blue: #1470d8;
+    --color-indigo: #4f46e5;
     --box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
     --dot-size: 1px;
     --dot-space: 22px;
